@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/potassco/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: c6bd979b94eebc531a191d957feb53e2e4b37858c71f3f5e04d73ab50db96f43
+  patches:
+    - find-python.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
