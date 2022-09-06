@@ -12,7 +12,7 @@ source:
     - find-python.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -24,10 +24,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - clingo
-  run:
     - clingo >=5.5
+  run:
     - python
+    # clingo breaks the API with minor version increments
+    - {{ pin_compatible('clingo', min_pin='x.x', max_pin='x.x') }}
     - cffi  # [python_impl == 'cpython']
 
 test:
