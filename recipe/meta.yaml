@@ -1,5 +1,5 @@
 {% set name = "clingcon" %}
-{% set version = "5.2.0" %}
+{% set version = "5.2.1" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   - url: https://github.com/potassco/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: 4b568475066e34be34110f481f7028b466c2b008e9ba41686e24ecbb468a40f2
+    sha256: ff17294757f3f3f2420acd2145fe9cb039b9aaeace428f546fee3896b00ef724
   - path: patches
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
