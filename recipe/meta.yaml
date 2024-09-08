@@ -10,7 +10,7 @@ source:
     sha256: ff17294757f3f3f2420acd2145fe9cb039b9aaeace428f546fee3896b00ef724
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - make  # [unix]
     - cmake >=3.24.0
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
