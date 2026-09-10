@@ -10,7 +10,7 @@ source:
     sha256: ff17294757f3f3f2420acd2145fe9cb039b9aaeace428f546fee3896b00ef724
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -23,9 +23,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - libpython
     - clingo >=5.5
   run:
     - python
+    - libpython
     # clingo breaks the API with minor version increments
     - {{ pin_compatible('clingo', min_pin='x.x', max_pin='x.x') }}
     - cffi  # [python_impl == 'cpython']
